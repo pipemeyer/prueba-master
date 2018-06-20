@@ -8,12 +8,185 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="css/normalize.min.css">
-		<link rel="stylesheet" href="css/main.css">
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 
+		<!-- Angular -->
+		<script src="js/angular.js"></script>
+
+		<!-- Main -->
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/main.js"></script>
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	</head>
 	<body>
-
-		<p>Hola Mundo</p>
-
+		<!-- header -->
+		<header class="p-4">
+			<div class="container head-container">
+				<span class="logo_header">
+					<a href="/" id="logo" title="ir a la Página de inicio" rel="Start">
+						Banco de chile
+					</a>
+				</span>
+				<nav class="navbar navbar-expand-lg text-right">
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  	<i class="fas fa-bars"></i>
+					  </button>
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  	<ul class="navbar-nav mr-auto">
+					  		<li class="nav-item active">
+					  			<a class="nav-link" href="#">Enlace 1</a>
+					  		</li>
+					  		<li class="nav-item active">
+					  			<a class="nav-link" href="#">Enlace 2</a>
+					  		</li>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!-- /header -->
+		<!-- main -->
+		<div id="main" class="m-4">
+			<div class="container">
+				<h1 class="mb-4 color-blue">Título</h1>
+				<!-- box_default -->
+				<div class="box_default">
+					<div class="tit_box_default p-4">
+						<h2 class="mb-0">Título Caja</h2>
+					</div>
+					<div class="row no-gutters p-4">
+						<div class="col-12 col-sm-4 mb-4 mb-sm-0">
+							<ul class="line_list">
+								<li>Dolor sit amet, consectetur adipiscing elit.</li>
+								<li>Dolor sit amet, consectetur adipiscing elit.</li>
+								<li>Dolor sit amet, consectetur adipiscing elit.</li>
+								<li>Dolor sit amet, consectetur adipiscing elit.</li>
+								<li>Dolor sit amet, consectetur adipiscing elit.</li>
+							</ul>
+						</div>
+						<div class="col-12 col-sm-7 offset-sm-1 box_white p-4">
+							<ul class="dots_list">
+								<li class="d-flex justify-content-between">
+									<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, nulla ut maximus tristique</span>
+									<span class="ml-3">-$200.000.000.000.</span></li>
+								<li class="d-flex justify-content-between">
+									<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, nulla ut maximus tristique</span>
+									<span class="ml-3">-$200.000.000.000.</span></li>
+							</ul>
+						</div>	
+					</div>
+				</div>
+				<!-- /movements -->
+				<section class="movements mt-4" ng-app="myApp" ng-controller="myCtrl">
+					<div id="accordion" class="mb-4">
+					  <div>
+					    <div class="card-header border-none" id="headingOne">
+					      <h5 class="mb-0">
+					        <a class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					          <span>Total itame: X</span>
+					          <span class="btn btn-secondary">Abrir</span>
+					        </a>
+					      </h5>
+					    </div>
+					    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+					      <div class="bg-gris p-4">
+					      	<div class="form-row align-items-center">
+							    <div class="col-sm-3 my-1">
+							      <div class="input-group">
+							        <div class="input-group-prepend">
+							          <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+							        </div>
+							        <input class="form-control" id="inlineFormInputGroupUsername" placeholder="Seleccionar" type="text">
+							      </div>
+							    </div>
+							    <div class="col-sm-3 my-1">
+							      <div class="input-group">
+							        <div class="input-group-prepend">
+							          <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+							        </div>
+							        <input class="form-control" id="inlineFormInputGroupUsername" placeholder="Seleccionar" type="text">
+							      </div>
+							    </div>
+							     <div class="col-sm-3 my-1">
+							     	<select class="form-control" id="exampleFormControlSelect1">
+								      <option>1</option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+								    </select>
+							    </div>
+							</div>
+							<div class="form-row justify-content-between align-items-center mt-2">
+								<div class="col-sm-7">
+									<input class="form-control" type="text" placeholder="Busqueda General...">
+								</div>
+							    <div class="col-auto my-1">
+							      <button type="submit" class="btn btn-primary">Buscar</button>
+							    </div>
+							  </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<table class="table">
+					        	<thead>
+					        		<tr>
+					        			<td></td>
+					        			<td>Lorem</td>
+					        			<td>ipsum</td>
+					        			<td>dolor</td>
+					        			<td>sit</td>
+					        			<td>amet</td>
+					        		</tr>
+					        	</thead>
+					        	<tbody>
+					        		<tr ng-repeat="data in dataTable">
+					        			<td>
+					        				<div class="form-group">
+					        					<input type="checkbox" class="form-check-input" id="exampleCheck1">
+					        				</div>
+					        			</td>
+					        			<td>{{data.lorem}}</td>
+					        			<td>{{data.ipsum}}</td>
+					        			<td>{{data.dolor}}</td>
+					        			<td>{{data.sit}}</td>
+					        			<td>{{data.amet}}</td>
+					        		</tr>
+					        	</tbody>
+					        </table>
+					        <div class="d-flex justify-content-center">
+						        <nav aria-label="Page navigation example">
+								  <ul class="pagination">
+								    <li class="page-item">
+								      <a class="page-link" href="#" aria-label="Previous">
+								        <span aria-hidden="true">&laquo;</span>
+								        <span class="sr-only">Previous</span>
+								      </a>
+								    </li>
+								    <li class="page-item"><a class="page-link" href="#">1</a></li>
+								    <li class="page-item"><a class="page-link" href="#">2</a></li>
+								    <li class="page-item"><a class="page-link" href="#">3</a></li>
+								    <li class="page-item">
+								      <a class="page-link" href="#" aria-label="Next">
+								        <span aria-hidden="true">&raquo;</span>
+								        <span class="sr-only">Next</span>
+								      </a>
+								    </li>
+								  </ul>
+								</nav>
+							</div>
+				</section>
+				<!-- movements -->
+			</div>
+		</div>
+		<!-- /main -->
 	</body>
 </html>
